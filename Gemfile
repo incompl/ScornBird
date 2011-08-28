@@ -11,7 +11,7 @@ gem 'sqlite3'
 
 gem 'twitter'
 
-gem "mysql2", "0.2.7" # for Rails < 3.1
+#gem 'mysql'
 
 # Use unicorn as the web server
 # gem 'unicorn'
