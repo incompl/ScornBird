@@ -1,0 +1,42 @@
+<article>
+    <h1>ScornBird - The Worst of Twitter</h1>
+    
+    <h2>Recent Awful Tweets</h2>
+    <% @tweets.each do |vote| %>
+        <div class="tweet">
+            <div class="scorn"><%= vote.num_votes %></div>
+            <div class="status">
+                <%= vote.status %>
+                <br/>
+                <span class="username">
+                    <a href="http://twitter.com/<%= vote.user %>/status/<%= vote.tid %>">
+                        <%= vote.user %>                    
+                    </a>
+                </span>
+            </div>
+        </div>
+    <% end %>
+    
+    <h2>Share your Scorn</h2>
+    <p>
+    Enter the URL to a tweet, such as this: http://twitter.com/#!/justinbieber/status/21387885232005120
+    </p>
+    <p id="message"/>
+    <form id="vote" action="vote" method="GET">
+        <input id="url" type="text" name="url" required="required"
+               placeholder="url" value="<%= params[:url] %>"/>
+        <input type="submit" name="submit" value="Lay the hate on"/>
+    </form>
+    
+    <h2>Bookmarklet</h2>
+    
+    <p>
+        Drag this link to your address bar. Then click it whenever you're on
+        the page of a crappy tweet.
+    </p>
+    
+    <p id="bookmarkletContainer">
+        JavaScript must be enabled to install the bookmarklet.
+    </p>
+    
+</article>

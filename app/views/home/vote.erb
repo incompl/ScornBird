@@ -1,0 +1,18 @@
+<article>
+    <h1>ScornBird - The Worst of Twitter</h1>
+    <% if @success %>
+        <h2>Vote Accepted</h2>
+        <p>
+            You have JavaScript disabled, but you were still able to vote.
+            Pretty nifty, eh?
+        </p>
+    <% else %>
+        <h2>Error</h2>
+        <p>
+            <%= @message %>
+        </p>
+    <% end %>
+    <p>
+        <a href="/">Back</a>
+    </p>
+</article>
