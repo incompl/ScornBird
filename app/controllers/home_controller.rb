@@ -3,7 +3,8 @@ class HomeController < ApplicationController
     respond_to :xml, :html
 
     def index
-        @tweets = Vote.all(
+        @tweets = Vote.find(
+                   :all,
                    :select => 'count(tid) num_votes, tid, status, user', 
                    :group => 'tid', 
                    #:conditions => ['validated = ?', 't' ], 
