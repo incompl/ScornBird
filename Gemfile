@@ -11,6 +11,8 @@ gem 'sqlite3'
 
 gem 'twitter'
 
+gem 'pg', '0.10.0'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
