@@ -5,7 +5,7 @@ class HomeController < ApplicationController
     def index
         @tweets = Vote.find(
                    :all,
-                   :select => 'count(tid) num_votes, tid, status, user', 
+                   :select => 'count(tid) as num_votes, tid, status, user', 
                    :group => 'tid', 
                    #:conditions => ['validated = ?', 't' ], 
                    :limit => 5)
