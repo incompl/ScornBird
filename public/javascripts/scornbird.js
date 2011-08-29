@@ -32,7 +32,7 @@ $(function() {
     
     $bookmarklet.attr("href", "javascript:" +
         '(function() {' +
-        'if (location.host.match(/incompl.com/)){alert("Read the instructions to learn how to use this bookmarklet.");return;}' +
+        'if (location.host.match(/scornbird/)){alert("Read the instructions to learn how to use this bookmarklet.");return;}' +
         'if (!location.host.match(/twitter.com/)){alert("Only works on twitter.com");return;}' +
         'location.assign("http://scornbird.incompl.com?url="+location.href)' +
         '})();');
