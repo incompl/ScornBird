@@ -9,7 +9,7 @@ $(function() {
             if (status === "success") {
                 var success = $(data).find("success").text() === "true";
                 if (success) {
-                    message("Success");
+                    message("Success", true);
                 }
                 else {
                     var msg = $(data).find("message").text();
@@ -43,9 +43,12 @@ $(function() {
     
     // Helpers ------------
     
-    function message(msg) {
+    function message(msg, refresh) {
+        if (refresh) {
+            msg += '<a class="refresh" href="javascript:location.reload()">Refresh</a>';
+        }
         $("#message").hide()
-        .text(msg)
+        .html(msg)
         .show("slow");
     }
 
